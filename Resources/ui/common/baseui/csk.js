@@ -18,6 +18,7 @@ function CSK(title) {
 
 	// ROW 1
 	var row1 = Ti.UI.createTableViewRow({
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 
 	});
 	row1.backgroundImage = '/images/tableview/easycustom/topRow.png';
@@ -51,7 +52,7 @@ function CSK(title) {
 		Ti.API.info('response', response[c].csk);
 
 		var row = Ti.UI.createTableViewRow({
-
+			selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 		});
 		if(c==response.length-1)
 		row.backgroundImage = '/images/tableview/easycustom/bottomRow.png'

@@ -22,7 +22,8 @@ function LiveScore(title) {
 			score = item.getElementsByTagName("description").item(0).text;
 			if (c == 0) {
 				var row = Ti.UI.createTableViewRow({
-					height : 80
+					height : 80,
+					selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 				});
 				row.backgroundImage = '/images/tableview/easycustom/topRow.png';
 				var label = Ti.UI.createLabel({
@@ -47,6 +48,7 @@ function LiveScore(title) {
 			if (c > 0) {
 
 				var row = Ti.UI.createTableViewRow({
+					selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE,
 					height : 80
 				});
 				row.backgroundImage = '/images/tableview/easycustom/middleRow.png';
@@ -73,8 +75,9 @@ function LiveScore(title) {
 		tableview = Titanium.UI.createTableView({
 			data : data,
 			style : Titanium.UI.iPhone.TableViewStyle.NONE,
-			backgroundImage : '/images/tableview/easycustom/gradientBackground.png',
-			separatorStyle : Ti.UI.iPhone.TableViewSeparatorStyle.NONE
+			//backgroundImage : '/images/tableview/easycustom/gradientBackground.png',
+			separatorStyle : Ti.UI.iPhone.TableViewSeparatorStyle.NONE,
+			backgroundColor:'transparent'
 		});
 		self.add(tableview);
 		tableview.addEventListener('click', function(e) {

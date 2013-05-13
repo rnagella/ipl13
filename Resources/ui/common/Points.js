@@ -13,7 +13,8 @@ function PointsWindow(title) {
 	function displayJSONTable(response) {
 		var row = Titanium.UI.createTableViewRow({
 			backgroundImage : '/images/tableview/easycustom/topRow.png',
-			height : 45
+			height : 45,
+			selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 		});
 
 		var team = Titanium.UI.createLabel({
@@ -99,11 +100,15 @@ function PointsWindow(title) {
 		row.add(runrate);
 		data.push(row);
 
-		for ( i = 0; i < response.points.length; i++) {
+		for ( i = 0 ,l=response.points.length; i < l ; i++) {
 			var row = Titanium.UI.createTableViewRow({
-				backgroundImage : '/images/tableview/easycustom/middleRow.png',
-				height : 45
+				height : 45,
+				selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 			});
+			if(1==(l-1))
+			row.backgroundImage = '/images/tableview/easycustom/bottomRow.png';
+			else
+			row.backgroundImage = '/images/tableview/easycustom/middleRow.png';
 			var image1 = Ti.UI.createImageView({
 				height : 'auto',
 				width : 'auto',
@@ -175,8 +180,7 @@ function PointsWindow(title) {
 			separatorStyle : Ti.UI.iPhone.TableViewSeparatorStyle.NONE,
 			style : Titanium.UI.iPhone.TableViewStyle.GROUPED,
 			separatorColor : '#390A0E',
-			backgroundImage : '/images/tableview/easycustom/gradientBackground.png'
-
+			backgroundColor:'transparent'
 		});
 
 		self.add(tableView);

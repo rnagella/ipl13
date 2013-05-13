@@ -16,6 +16,7 @@ function MostRuns(title) {
 
 		// ROW 1
 		var row1 = Ti.UI.createTableViewRow({
+			selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 
 		});
 		row1.backgroundImage = '/images/tableview/easycustom/topRow.png';
@@ -45,6 +46,7 @@ function MostRuns(title) {
 		section.add(row1);
 
 		var row2 = Ti.UI.createTableViewRow({
+			selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 
 		});
 		var teamLabel = Ti.UI.createLabel({
@@ -325,8 +327,9 @@ function MostRuns(title) {
 			data : data,
 			separatorColor : '#390A0E',
 			style : Titanium.UI.iPhone.TableViewStyle.NONE,
-			backgroundImage : '/images/tableview/easycustom/gradientBackground.png',
-			separatorStyle : Ti.UI.iPhone.TableViewSeparatorStyle.NONE
+			//backgroundImage : '/images/tableview/easycustom/gradientBackground.png',
+			separatorStyle : Ti.UI.iPhone.TableViewSeparatorStyle.NONE,
+			backgroundColor:'transparent'
 		});
 		tableview.addEventListener('click', function(e) {
 			if (e.rowData.test) {

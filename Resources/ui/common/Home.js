@@ -12,7 +12,8 @@ function HomeWindow(title) {
 	data.push(section);
 	var row1 = Ti.UI.createTableViewRow({
 		hasChild : true,
-		test : 'ui/common/baseui/csk'
+		test : 'ui/common/baseui/csk',
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	row1.backgroundImage = '/images/tableview/easycustom/topRow.png';
 	row1.height = 60;
@@ -39,17 +40,12 @@ function HomeWindow(title) {
 	});
 	row1.add(item1);
 
-	var add1 = Ti.UI.createButton({
-		backgroundImage : '/images/groupedview/addDefault.png',
-		height : 27,
-		width : 27,
-		top : 15,
-		right : 10
-	});
 	section.add(row1);
 	var row2 = Ti.UI.createTableViewRow({
 		hasChild : true,
-		test : 'ui/common/baseui/dd'
+		test : 'ui/common/baseui/dd',
+		selectedColor:'transparent',
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	row2.backgroundImage = '/images/tableview/easycustom/middleRow.png';
 	row2.height = 60;
@@ -74,19 +70,12 @@ function HomeWindow(title) {
 	});
 	row2.add(item2);
 
-	var add2 = Ti.UI.createButton({
-		backgroundImage : '/images/groupedview/addDefault.png',
-		height : 27,
-		width : 27,
-		top : 15,
-		right : 10
-	});
-
 	section.add(row2);
 
 	var row3 = Ti.UI.createTableViewRow({
 		hasChild : true,
-		test : 'ui/common/baseui/sh'
+		test : 'ui/common/baseui/sh',
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	row3.backgroundImage = '/images/tableview/easycustom/middleRow.png';
 	row3.height = 60;
@@ -111,18 +100,12 @@ function HomeWindow(title) {
 	});
 	row3.add(item3);
 
-	var add3 = Ti.UI.createButton({
-		backgroundImage : '/images/groupedview/addDefault.png',
-		height : 27,
-		width : 27,
-		top : 15,
-		right : 10
-	});
 	section.add(row3);
 	// ROW 4
 	var row4 = Ti.UI.createTableViewRow({
 		hasChild : true,
-		test : 'ui/common/baseui/kxip'
+		test : 'ui/common/baseui/kxip',
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	row4.backgroundImage = '/images/tableview/easycustom/middleRow.png';
 	row4.height = 60;
@@ -147,20 +130,13 @@ function HomeWindow(title) {
 	});
 	row4.add(item4);
 
-	var add4 = Ti.UI.createButton({
-		backgroundImage : '/images/groupedview/addDefault.png',
-		height : 27,
-		width : 27,
-		top : 15,
-		right : 10
-	});
-
 	section.add(row4);
 
 	// ROW 5
 	var row5 = Ti.UI.createTableViewRow({
 		hasChild : true,
-		test : 'ui/common/baseui/kkr'
+		test : 'ui/common/baseui/kkr',
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	row5.backgroundImage = '/images/tableview/easycustom/middleRow.png';
 	row5.height = 60;
@@ -185,26 +161,14 @@ function HomeWindow(title) {
 	});
 	row5.add(item5);
 
-	var add5 = Ti.UI.createButton({
-		backgroundImage : '/images/groupedview/addDefault.png',
-		height : 27,
-		width : 27,
-		top : 15,
-		right : 10
-	});
-
 	section.add(row5);
 
-	var tableview = Titanium.UI.createTableView({
-		data : data,
-		style : Titanium.UI.iPhone.TableViewStyle.GROUPED,
-		backgroundColor : 'transparent',
-		separatorColor : '#390A0E'
-	});
+	
 	// ROW 6
 	var row6 = Ti.UI.createTableViewRow({
 		hasChild : true,
-		test : 'ui/common/baseui/mi'
+		test : 'ui/common/baseui/mi',
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	row6.backgroundImage = '/images/tableview/easycustom/middleRow.png';
 	row6.height = 60;
@@ -230,20 +194,14 @@ function HomeWindow(title) {
 	});
 	row6.add(item6);
 
-	var add6 = Ti.UI.createButton({
-		backgroundImage : '/images/groupedview/addDefault.png',
-		height : 27,
-		width : 27,
-		top : 15,
-		right : 10
-	});
 
 	section.add(row6);
 
 	// ROW 7
 	var row7 = Ti.UI.createTableViewRow({
 		hasChild : true,
-		test : 'ui/common/baseui/pw'
+		test : 'ui/common/baseui/pw',
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	row7.backgroundImage = '/images/tableview/easycustom/middleRow.png';
 	row7.height = 60;
@@ -282,7 +240,8 @@ function HomeWindow(title) {
 	// ROW 8
 	var row8 = Ti.UI.createTableViewRow({
 		hasChild : true,
-		test : 'ui/common/baseui/rr'
+		test : 'ui/common/baseui/rr',
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	row8.backgroundImage = '/images/tableview/easycustom/middleRow.png';
 	row8.height = 60;
@@ -311,20 +270,14 @@ function HomeWindow(title) {
 	});
 	row8.add(item8);
 
-	var add8 = Ti.UI.createButton({
-		backgroundImage : '/images/groupedview/addDefault.png',
-		height : 27,
-		width : 27,
-		top : 15,
-		right : 10
-	});
 
 	section.add(row8);
 
 	// ROW 9
 	var row9 = Ti.UI.createTableViewRow({
 		hasChild : true,
-		test : 'ui/common/baseui/rcb'
+		test : 'ui/common/baseui/rcb',
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	row9.backgroundImage = '/images/tableview/easycustom/bottomRow.png';
 	row9.height = 60;
@@ -353,15 +306,14 @@ function HomeWindow(title) {
 	});
 	row9.add(item9);
 
-	var add9 = Ti.UI.createButton({
-		backgroundImage : '/images/groupedview/addDefault.png',
-		height : 27,
-		width : 27,
-		top : 15,
-		right : 10
-	});
-
 	section.add(row9);
+	
+	var tableview = Titanium.UI.createTableView({
+		data : data,
+		style : Titanium.UI.iPhone.TableViewStyle.GROUPED,
+		backgroundColor : 'transparent',
+		separatorColor : '#390A0E'
+	});
 
 	tableview.addEventListener('click', function(e) {
 		if (e.rowData.test) {

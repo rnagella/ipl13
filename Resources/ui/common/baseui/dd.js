@@ -18,7 +18,7 @@ function dd(title) {
 
 	// ROW 1
 	var row1 = Ti.UI.createTableViewRow({
-
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	row1.backgroundImage = '/images/tableview/easycustom/topRow.png';
 	row1.height = 90;
@@ -49,6 +49,7 @@ function dd(title) {
 	for ( c = 0; c < response.length; c++) {
 
 		var row = Ti.UI.createTableViewRow({
+			selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 
 		});
 		if(c==response.length-1)

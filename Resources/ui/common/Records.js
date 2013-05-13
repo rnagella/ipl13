@@ -15,7 +15,8 @@ function RecordsWindow(title) {
 	// ROW 1
 	var row1 = Ti.UI.createTableViewRow({
 		hasChild : true,
-		test : 'ui/common/baseui/mostruns'
+		test : 'ui/common/baseui/mostruns',
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 
 	});
 	row1.backgroundImage = '/images/tableview/easycustom/topRow.png';
@@ -66,7 +67,8 @@ function RecordsWindow(title) {
 	// ROW 2
 	var row2 = Ti.UI.createTableViewRow({
 		hasChild : true,
-		test : 'ui/common/baseui/mostwickets'
+		test : 'ui/common/baseui/mostwickets',
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	row2.backgroundImage = '/images/tableview/easycustom/middleRow.png';
 	row2.height = 60;
@@ -102,7 +104,8 @@ function RecordsWindow(title) {
 	// ROW 3
 	var row3 = Ti.UI.createTableViewRow({
 		hasChild : true,
-		test : 'ui/common/baseui/mostsixes'
+		test : 'ui/common/baseui/mostsixes',
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	row3.backgroundImage = '/images/tableview/easycustom/middleRow.png';
 	row3.height = 60;
@@ -141,7 +144,8 @@ function RecordsWindow(title) {
 	// ROW 4
 	var row4 = Ti.UI.createTableViewRow({
 		hasChild : true,
-		test : 'ui/common/baseui/mostfours'
+		test : 'ui/common/baseui/mostfours',
+		selectionStyle:Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	row4.backgroundImage = '/images/tableview/easycustom/bottomRow.png';
 
