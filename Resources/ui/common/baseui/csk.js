@@ -53,6 +53,9 @@ function CSK(title) {
 		var row = Ti.UI.createTableViewRow({
 
 		});
+		if(c==response.length-1)
+		row.backgroundImage = '/images/tableview/easycustom/bottomRow.png'
+		else
 		row.backgroundImage = '/images/tableview/easycustom/middleRow.png';
 		row1.height = 90;
 
@@ -72,6 +75,8 @@ function CSK(title) {
 		section.add(row);
 
 	}
+	
+	
 
 	var tableview = Titanium.UI.createTableView({
 		data : data,

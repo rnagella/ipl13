@@ -51,6 +51,9 @@ function mi(title) {
 		var row = Ti.UI.createTableViewRow({
 
 		});
+		if(c==response.length-1)
+		row.backgroundImage = '/images/tableview/easycustom/bottomRow.png';
+		else
 		row.backgroundImage = '/images/tableview/easycustom/middleRow.png';
 		row1.height = 90;
 
