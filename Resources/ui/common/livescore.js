@@ -13,12 +13,7 @@ function LiveScore(title) {
 	var data;
 	var tableview;
 	var x = 0;
-	tableview = Titanium.UI.createTableView({
-			style : Titanium.UI.iPhone.TableViewStyle.NONE,
-			//backgroundImage : '/images/tableview/easycustom/gradientBackground.png',
-			separatorStyle : Ti.UI.iPhone.TableViewSeparatorStyle.NONE,
-			backgroundColor:'transparent'
-		});
+	
 	function displayItems(items) {
 		var item = 0;
 		var title = 0;
@@ -78,8 +73,13 @@ function LiveScore(title) {
 				row.url = item.getElementsByTagName("url-link").item(0).text;
 			}
 		}
-		
-		tableview.data = data;
+		tableview = Titanium.UI.createTableView({
+			style : Titanium.UI.iPhone.TableViewStyle.NONE,
+			separatorStyle : Ti.UI.iPhone.TableViewSeparatorStyle.NONE,
+			data:data,
+			backgroundImage:'/images/tableview/easycustom/gradientBackground.png'
+		});
+		//tableview.data = data;
 		self.add(tableview);
 		tableview.addEventListener('click', function(e) {
 			var w = Ti.UI.createWindow({
@@ -94,11 +94,13 @@ function LiveScore(title) {
 				style : Titanium.UI.iPhone.SystemButtonStyle.PLAIN
 			});
 			w.setLeftNavButton(b);
-			b.addEventListener('click', function() {
-				w.close();
-			});
+			
 			w.open({
 				modal : true
+			});
+			b.addEventListener('click', function() {
+				w.close();
+				w =null;
 			});
 		});
 	}
