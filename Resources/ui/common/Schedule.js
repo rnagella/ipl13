@@ -10,12 +10,15 @@ function ScheduleWindow(title) {
 	self.backgroundImage = '/images/tableview/easycustom/gradientBackground.png';
 
 	var data = [];
-	var fileName = 'schedule-1.json';
-	var file = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory, fileName);
+	var fileName = 'data/schedule-1.json';
+	var file = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory, fileName);
+	console.log(file);
+	//var dir = Titanium.Filesystem.resourcesDirectory;
+	//console.log('dir',dir);
 	var preParseData = (file.read().text);
 	var response = JSON.parse(preParseData);
-	var fileName2 = 'final-schedule.json';
-	var file2 = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory, fileName2);
+	var fileName2 = 'data/final-schedule.json';
+	var file2 = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory, fileName2);
 	var preParseData2 = (file2.read().text);
 	var response2 = JSON.parse(preParseData2);
 	var c = 0;

@@ -2,8 +2,8 @@
  * @author ranjith kumar nagella
  */
 function dd(title) {
-	var fileName = "dd-players.json";
-	var file = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory, fileName);
+	var fileName = "data/dd-players.json";
+	var file = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory, fileName);
 	var preParseData = (file.read().text);
 	var response = JSON.parse(preParseData);
 	var self = Ti.UI.createWindow({

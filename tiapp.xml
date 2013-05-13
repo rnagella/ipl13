@@ -6,7 +6,7 @@
     <property name="acs-oauth-secret-development" type="string">JNA63C6xOzVmElWYZaxR7OTF8fSz7iU2</property>
     <property name="acs-oauth-key-development" type="string">peLhSbT5VwwhPJdwfwjZxhtu01YCF7oe</property>
     <property name="acs-api-key-development" type="string">u17MbwWv0v3wYLW3xXJ1zZNlRkgN28Mb</property>
-    <id>com.iplseason.ipl13</id>
+    <id>com.rnagella.ipl13</id>
     <name>ipl13</name>
     <version>1.0</version>
     <publisher>Ranjith</publisher>
