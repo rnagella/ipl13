@@ -10,6 +10,13 @@ function PointsWindow(title) {
 	self.backgroundImage = '/images/tableview/easycustom/gradientBackground.png';
 	var data;
 	var response;
+	var tableView = Titanium.UI.createTableView({
+			width : 340,
+			separatorStyle : Ti.UI.iPhone.TableViewSeparatorStyle.NONE,
+			style : Titanium.UI.iPhone.TableViewStyle.GROUPED,
+			separatorColor : '#390A0E',
+			backgroundColor:'transparent'
+		});
 	function displayJSONTable(response) {
 		var row = Titanium.UI.createTableViewRow({
 			backgroundImage : '/images/tableview/easycustom/topRow.png',
@@ -174,15 +181,8 @@ function PointsWindow(title) {
 			data.push(row);
 
 		}
-		var tableView = Titanium.UI.createTableView({
-			width : 340,
-			data : data,
-			separatorStyle : Ti.UI.iPhone.TableViewSeparatorStyle.NONE,
-			style : Titanium.UI.iPhone.TableViewStyle.GROUPED,
-			separatorColor : '#390A0E',
-			backgroundColor:'transparent'
-		});
-
+		
+		tableView.data=data;
 		self.add(tableView);
 	}
 

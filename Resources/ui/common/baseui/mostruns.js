@@ -9,6 +9,12 @@ function MostRuns(title) {
 		backgroundImage : '/images/tableview/easycustom/gradientBackground.png'
 	});
 	var data = [];
+	var tableview = Titanium.UI.createTableView({
+			separatorColor : '#390A0E',
+			style : Titanium.UI.iPhone.TableViewStyle.NONE,
+			separatorStyle : Ti.UI.iPhone.TableViewSeparatorStyle.NONE,
+			backgroundColor:'transparent'
+		});
 
 	function mostRunsData(response) {
 		var section = Ti.UI.createTableViewSection();
@@ -322,15 +328,8 @@ function MostRuns(title) {
 		section.add(row2);
 		row2.backgroundImage = '/images/tableview/easycustom/bottomRow.png';
 
-		var tableview = Titanium.UI.createTableView({
-			data : data,
-			data : data,
-			separatorColor : '#390A0E',
-			style : Titanium.UI.iPhone.TableViewStyle.NONE,
-			//backgroundImage : '/images/tableview/easycustom/gradientBackground.png',
-			separatorStyle : Ti.UI.iPhone.TableViewSeparatorStyle.NONE,
-			backgroundColor:'transparent'
-		});
+		
+		tableview.data = data;
 		tableview.addEventListener('click', function(e) {
 			if (e.rowData.test) {
 				var ExampleWindow = require(e.rowData.test), win = new ExampleWindow({
